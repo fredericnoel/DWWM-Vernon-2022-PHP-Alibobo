@@ -60,8 +60,8 @@ if (isset($_POST['frmInscription'])) {
         $query->bindValue(':prenom',$prenom, PDO::PARAM_STR);
         $query->bindValue(':email',$email, PDO::PARAM_STR);
         $query->execute();
-        header('Location: inscription.php?id=');
-        echo "Utilisateur enregistré.";
+        header('Location: index.php');
+        
     }
 }
 
