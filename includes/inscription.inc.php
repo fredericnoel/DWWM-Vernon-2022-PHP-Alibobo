@@ -1,7 +1,3 @@
-<?php
-require('./includes/pdo.php');
-?>
-
 
 <h1>Inscription</h1>
 <?php
@@ -50,18 +46,18 @@ if (isset($_POST['frmInscription'])) {
     }
 
     else {
-        $mdp1 = sha1($mdp1);
-        //$requeteInscription = "INSERT INTO t_utilisateurs
-       //(id_utilisateur, nom, prenom, email, mdp)
-        //VALUES (NULL, '$nom', '$prenom', '$email', '$mdp1')";
-        $requete_insert = "INSERT INTO `utilisateurs` (`nom`, `prenom`, `email`) VALUES (:nom,:prenom,:email)";
-        $query = $pdo->prepare($requete_insert);
-        $query->bindValue(':nom',$nom, PDO::PARAM_STR);
-        $query->bindValue(':prenom',$prenom, PDO::PARAM_STR);
-        $query->bindValue(':email',$email, PDO::PARAM_STR);
-        $query->execute();
-        header('Location: index.php');
-        
+        if ($pdo = pdo()) {
+            $mdp1 = sha1($mdp1);
+            $requete_insert = "INSERT INTO `utilisateurs` (`nom`, `prenom`, `email`) VALUES (:nom,:prenom,:email)";
+            $query = $pdo->prepare($requete_insert);
+            $query->bindValue(':nom', $nom, PDO::PARAM_STR);
+            $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
+            $query->bindValue(':email', $email, PDO::PARAM_STR);
+            $query->execute();
+            //header('Location: index.php');
+        } else {
+            echo 'erreur';
+        }
     }
 }
 
