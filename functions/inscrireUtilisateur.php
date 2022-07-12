@@ -1,15 +1,5 @@
 <?php
 
-function checkMail(string $email) {
-    if ($pdo = pdo()) {
-$checkUser="SELECT COUNT(*) FROM utilisateurs WHERE Email = '$email'";
-if ($checkUser > 0)
-{
-    echo "User Already in Exists";
-} else {
-    return true;
-}}
-
     function inscrireUtilisateur(string $nom, string $prenom, string $email, string $mdp): bool
     {
         $mdp = sha1($mdp);
@@ -27,7 +17,7 @@ if ($checkUser > 0)
         } else {
             return false;
         }
-    }}
+    }
 
 
 
