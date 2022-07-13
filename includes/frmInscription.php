@@ -21,8 +21,9 @@
     </div>
     <div>
     <label>Entrer le texte dans l'image</label>
-        <input name="captcha" type="text">
-        <img src="captcha.php" style="vertical-align: middle;"/>
+        <input type="text" name="captcha"/>
+        <input type="submit"/>
+        <img src="./includes/captcha.php" onclick="this.src='./includes/captcha.php?' + Math.random();" alt="captcha" style="cursor:pointer;">
     </div>
     <div>
         <input type="reset" value="Effacer" />
