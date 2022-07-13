@@ -20,8 +20,13 @@
         <input type="password" id="mdp2" name="mdp2" />
     </div>
     <div>
+    <label>Entrer le texte dans l'image</label>
+        <input name="captcha" type="text">
+        <img src="captcha.php" style="vertical-align: middle;"/>
+    </div>
+    <div>
         <input type="reset" value="Effacer" />
-        <input type="submit" value="Envoyer" />
+        <input name= "submit" type="submit" value="Envoyer" />
     </div>
     <input type="hidden" name="frmInscription" />
 </form>
