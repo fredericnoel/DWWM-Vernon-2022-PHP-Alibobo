@@ -5,7 +5,7 @@
 
 - si l'utilisateur existe : envoyer un email contenant un token horodaté à l'utilisateur
 
-- après clique sur le lien du token de l'utilisateur, redirection vers la page forgotten password puis affichage d'un formulaire proposant à l'utilisateur de renouveler son mot de passe
+- après clique sur le lien du token de l'utilisateur, redirection vers le token prévu à cet effet puis affichage d'un formulaire proposant à l'utilisateur de renouveler son mot de passe
 
 - vérification du nouveau mot de passe (entrer le mot de passe deux fois)
 
