@@ -2,10 +2,22 @@
 
 session_start();
 
+<<<<<<< HEAD
 require_once './functions/autoLoad.php';
 autoLoad("*.php");
 
 require __DIR__ . '/vendor/autoload.php';
+=======
+
+require __DIR__ . '/vendor/autoload.php';
+require_once './functions/autoload.php';
+autoload("*.php");
+
+// $toto ="toto";
+// dump($toto);
+
+
+>>>>>>> 06c41c50bc0f18afbf452100737d28c52a6c3b3f
 
 // Définir le fuseau horaire dans lequel le serveur se trouve
 date_default_timezone_set('Europe/Paris');

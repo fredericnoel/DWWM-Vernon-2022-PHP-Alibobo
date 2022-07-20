@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <style>
     table {
@@ -24,16 +25,28 @@
         padding-top: 12px;
     }
 </style>
+=======
+>>>>>>> 06c41c50bc0f18afbf452100737d28c52a6c3b3f
 <?php
 
 // Affichage des articles pour les utilisateurs connectés avec les droits admin
 
+<<<<<<< HEAD
 if (verifierAdmin()) {
     if ($pdo = pdo()) {
         $champ = $_GET['champ'] ?? "designation";
         $orderby = $_GET['orderby'] ?? "asc";
 
         $requeteArticles = "SELECT * FROM articles  ORDER BY $champ $orderby";
+=======
+
+if (verifierAdmin()) {
+    if ($pdo = pdo()) { 
+        $champ = $_GET['champ'] ?? "designation";
+        $orderby = $_GET['orderby'] ?? "asc";
+
+        $requeteArticles = "SELECT * FROM articles ORDER BY $champ $orderby";
+>>>>>>> 06c41c50bc0f18afbf452100737d28c52a6c3b3f
 
         $tableauResultats = "<table>";
         $tableauResultats .= "<thead>";
@@ -63,9 +76,12 @@ if (verifierAdmin()) {
         $tableauResultats .= genererUrl('Stock de sécurité', ' 	qtestockesecu ', $champ, $orderby);
         $tableauResultats .= "</th>";
         $tableauResultats .= "</tr>";
+<<<<<<< HEAD
         $tableauResultats .= "<th>";
        
         $tableauResultats .= "</th>";
+=======
+>>>>>>> 06c41c50bc0f18afbf452100737d28c52a6c3b3f
         $tableauResultats .= "</thead>";
         $tableauResultats .= "<tbody>";
 
@@ -81,10 +97,15 @@ if (verifierAdmin()) {
             $tableauResultats .= "<td>" . $row['masse'] . "</td>";
             $tableauResultats .= "<td>" . $row['id_categorie'] . "</td>";
             $tableauResultats .= "<td>" . $row['qtestock'] . "</td>";
+<<<<<<< HEAD
             $tableauResultats .= "<td>" . $row['qtestocksecu'] . "</td>";
             $tableauResultats .= "<td><a href=\"index.php?page=update&amp;articleId=" . $row['id_article'] . "\">" .  "Modifier</a></td>";
             $tableauResultats .= "<td><a href=\"index.php?page=delete&amp;articleId=" . $row['id_article'] . "\">" .  "Supprimer </a></td>";
           $tableauResultats .= "</tr>";
+=======
+            $tableauResultats .= "<td>" . $row['qtestockesecu'] . "</td>";
+            $tableauResultats .= "</tr>";
+>>>>>>> 06c41c50bc0f18afbf452100737d28c52a6c3b3f
         }
 
         $tableauResultats .= "</tbody>";
@@ -92,6 +113,7 @@ if (verifierAdmin()) {
 
         echo $tableauResultats;
 
+<<<<<<< HEAD
         if (isset($_POST['frmInscription'])) {
             $nom = isset($_POST['nom']) ? htmlentities(trim($_POST['nom'])) : "";
             $prenom = isset($_POST['prenom']) ? htmlentities(trim($_POST['prenom'])) : "";
@@ -100,6 +122,8 @@ if (verifierAdmin()) {
             $mdp2 = isset($_POST['mdp2']) ? htmlentities(trim($_POST['mdp2'])) :  "";
             $cgu = isset($_POST['cgu']) ? $_POST['cgu'] :  "";
 
+=======
+>>>>>>> 06c41c50bc0f18afbf452100737d28c52a6c3b3f
     } else {
         echo "<p>Erreur PDO</p>";
     }
@@ -113,4 +137,8 @@ if (verifierAdmin()) {
     </script>
     ";
     echo $codeJs;
+<<<<<<< HEAD
 }}
+=======
+}
+>>>>>>> 06c41c50bc0f18afbf452100737d28c52a6c3b3f

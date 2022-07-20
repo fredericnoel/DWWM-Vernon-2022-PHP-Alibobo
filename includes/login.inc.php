@@ -53,4 +53,8 @@ if (isset($_POST['frmLogin'])) {
 } else {
     $email = "";
     require './includes/frmLogin.php';
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 06c41c50bc0f18afbf452100737d28c52a6c3b3f
